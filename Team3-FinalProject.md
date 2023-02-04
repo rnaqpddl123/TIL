@@ -18,11 +18,19 @@ dao에 적는 sql문에서 as를 생략해서 쓰면 alias한 데이터들을 �
 2. score를 기준으로 내림차순 정렬을해서 매칭 리스트에 보여준다.
 
 
-### 스프링 만들때 error발생한 부분들
+## 스프링 만들때 error발생한 부분들
 
 1. 함수(Utill)을 만들어서 사용할때도 위에 @Service를 붙여야함
 2. 데이터 길이를 맞추기 위해서 String.format를 활용해 공백을 맞춰서 길이를 맞춰줌
 3. List 정렬할때 내가 만든 객체로 정렬할경우
 	Collections.sort(matchingList, (m1, m2) -> (int)(m2.getScore()- m1.getScore()));
 	위와 같이 만들어준다.
+
+## 네이버 클라우드 연결
+1. mavenbuild를 하면 target폴더에 project-0.0.1-SNAPSHOT.war파일이 생성되는데 이 파일을 mobXterm에 옮긴다.
+2. .war파일이 있는곳에서 java –jar project-0.0.1-SNAPSHOT.war를 입력하면 네이버 클라우드에서 서버를 열어준다.
+3, mobaXterm을 종료한 뒤에도 서버를 유지하고 싶다면 nohup java –jar project-0.0.1-SNAPSHOT.war > project.log 2>&1 & 입력하면
+mobaXterm을 종료한뒤에도 서버가 유지된다.
+
+
 
