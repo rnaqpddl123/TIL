@@ -39,6 +39,10 @@ dao에 적는 sql문에서 as를 생략해서 쓰면 alias한 데이터들을 �
 mobaXterm을 종료한뒤에도 서버가 유지된다.
 
 
+## 스프링에서 데이터 보낸것들을 자바스크립트에서 다룰때
+1. 스크립트에서 ${data}는  document.getElementById(${data})로 인식한다.
+
+
 
 
 
