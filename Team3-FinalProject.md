@@ -39,9 +39,14 @@ dao에 적는 sql문에서 as를 생략해서 쓰면 alias한 데이터들을 �
 mobaXterm을 종료한뒤에도 서버가 유지된다.
 
 
-## 스프링에서 데이터 보낸것들을 자바스크립트에서 다룰때
+## 스프링에서 데이터 보낸것들을 자바스크립트에서 다룰때 나온 문제점들
 1. 스크립트에서 ${data}는  document.getElementById(${data})로 인식한다.
-
+2. ${List}로 보낼경우에는 for문 으로 돌리면 각각을  document.getElementById(${data})로 인식해준다.
+3. List내에서 E-sports같은경우는 '-' 때문에 인식을 제대로 못해준다. E와 sports를 각각 인식하는 문제가 생겼다.
+	a. hidden으로 value값으로 List를 따로 입력해줘서 그 value값을 가져와서 array형태로 다시 만들어준다.
+	b. var likeExerList = document.getElementById('likeExerList').value.replace(/\s/g,'').replace(/\[/g,'').replace(/\]/g,''); 
+	c. let ExerList = likeExerList.split(',');	
+	d. 그후에 각각을 for문으로 결과를 처리하면된다.
 
 
 
