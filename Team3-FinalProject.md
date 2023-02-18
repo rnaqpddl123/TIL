@@ -49,5 +49,17 @@ mobaXterm을 종료한뒤에도 서버가 유지된다.
 	d. 그후에 각각을 for문으로 결과를 처리하면된다.
 
 
+## 스프링 에러페이지 만들기
+1. application.properties에서 
+	server.error.include-exception = true
+	server.error.path=/error
+	작성해서 에러페이지로 이동하는 페이지와 exception도 error페이지로 보내게 처리해줘야함
+2. 내가 실수로 @GetMapping로 경로를 설정해 줬었는데 post에서 exception문제가 일어나서 exception처리를 못해줬었다.
+	@RequestMapping로 경로를 설정해서 get,post방식 모두에서 에러가 났을때 에러페이로 이동할수있게 경로설정을 해줘야한다.
+
+
+## 속도 향상
+1. 현재 스프링 프레임워크에서 처리한 필터링을 MySQL에서 처리하게 하기
+	개선전 : 데이터 14개기준 27,22,20,19,16..13~14밀리초
 
 
