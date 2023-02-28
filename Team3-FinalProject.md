@@ -72,4 +72,13 @@ mobaXterm을 종료한뒤에도 서버가 유지된다.
 	걸리는 시간이 1/3이하로 줄어들음
 
 
+### 아이디,닉네임 중복체크
+자바스크립트에서 id가 "uid" a태그의 값을 가져오고 싶다면
+document.getElementById('uid').text; 또는 $('#uid').text();로 텍스트 값을 가져올수있다.
+해당 텍스트 값을 변경하고싶다면
+document.getElementById('uid').innerText = '변경할 내용'; 또는
+ $('#uid').text('변경할 내용') ; 으로 변경가능하다
+
+
+
 
