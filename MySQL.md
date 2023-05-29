@@ -18,7 +18,7 @@ ALTER TABLE `테이블명` ADD `컬럼명` 자료형
 2. 맨앞에 컬럼추가
 ALTER TABLE `테이블명` ADD `새컬럼명` 자료형 FIRST
 
-3. 지정 컬람 다음에 추가
+3. 지정 컬럼 다음에 추가
 ALTER TABLE `테이블명` ADD `새컬럼명` 자료형 AFTER `앞컬럼명`
 
 

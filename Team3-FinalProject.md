@@ -80,5 +80,13 @@ document.getElementById('uid').innerText = '변경할 내용'; 또는
  $('#uid').text('변경할 내용') ; 으로 변경가능하다
 
 
+## 로그인 이후에 이전페이지로 돌아가는법 
+ String prevPage = (String) req.getHeader("REFERER");
+ prevPage에 이전 페이지의 주소가 저장된다.
+ 다만 이 방법은 주소를 직접입력하거나 다른 컨트롤러에서 redirect방법으로 들어왔을경우에는
+주소를 받을수가 없다.
+ 이 두가지 예외의 경우에는 다른방식으로 처리를 따로 해주어야한다.
+ 해당 프로젝트에서는 prevPage가 null일때는 대문으로 가게하였고 
+redirect방식으로 왔을때는 특정 파라미터값을 넘겨주어서 파라미터값에 따라 페이지이동을 시켯다.
 
 
